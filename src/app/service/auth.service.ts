@@ -9,16 +9,16 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  constructor(  
-    private http: HttpClient
-    ) { }
+  constructor(private http: HttpClient) {
+    
+   }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('https://personalblogwesley.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/usuario-controller/authentication', userLogin)
+    return this.http.post<UserLogin>('https://personalblogwesley.herokuapp.com/usuarios/logar', userLogin)
   }
 
   cadastrar(user: User): Observable<User>{
-    return this.http.post<User>('https://personalblogwesley.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/usuario-controller/postUsuario', User)
+    return this.http.post<User>('https://personalblogwesley.herokuapp.com/usuarios/cadastrar', user)
 
   }
 }
