@@ -5,3 +5,13 @@
 .fs-18{
     font-size: 18pt;
 }
+
+body
+{
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: .8em;
+  }
+  
