@@ -28,10 +28,10 @@ export class TemaService {
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://personalblogwesley.herokuapp.com/tema', this.token)
+    return this.http.put<Tema>('https://personalblogwesley.herokuapp.com/tema',tema, this.token)
   }
 
   deleteTema(id: number){
-    return this.http.delete(`https://personalblogwesley.herokuapp.com/tema/${id},`, this.token)
+    return this.http.delete(`https://personalblogwesley.herokuapp.com/tema/${id}`, this.token)
   }
 }
