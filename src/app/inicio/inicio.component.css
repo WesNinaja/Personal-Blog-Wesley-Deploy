@@ -14,4 +14,13 @@ body
 :target {
     scroll-margin-top: .8em;
   }
+
+  .yellow{
+      background: #F29F05;
+      color: white;
+  }
+
+  bc-white{
+      background: black;
+  }
   
